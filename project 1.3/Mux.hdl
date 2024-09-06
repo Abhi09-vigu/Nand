@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CHIP Mux {
     IN a, b, sel;
     OUT out;
@@ -8,4 +9,16 @@ CHIP Mux {
     And(a=b,b=sel,out=bsel);
     Or(a=anotsel,b=bsel,out=out);
     //// Replace this comment with your code.
+=======
+CHIP Mux {
+    IN a, b, sel;
+    OUT out;
+
+    PARTS:
+    Not(in=sel,out=notsel);
+    And(a=a,b=notsel,out=anotsel);
+    And(a=b,b=sel,out=bsel);
+    Or(a=anotsel,b=bsel,out=out);
+    //// Replace this comment with your code.
+>>>>>>> e4f757cd9bf5334e2111cf62b72efb3ec8979888
 }

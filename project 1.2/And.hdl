@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 CHIP And {
     IN a, b;
@@ -8,4 +9,16 @@ CHIP And {
     Nand(a=nanda, b=nanda, out=out);
 
     //// Replace this comment with your code.
+=======
+
+CHIP And {
+    IN a, b;
+    OUT out;
+    
+    PARTS:
+    Nand(a=a, b=b, out=nanda);
+    Nand(a=nanda, b=nanda, out=out);
+
+    //// Replace this comment with your code.
+>>>>>>> e4f757cd9bf5334e2111cf62b72efb3ec8979888
 }

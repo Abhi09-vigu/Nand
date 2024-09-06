@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CHIP DMux {
     IN in, sel;
     OUT a, b;
@@ -8,4 +9,16 @@ CHIP DMux {
     And(a=in, b=sel, out=b);
 
     //// Replace this comment with your code.
+=======
+CHIP DMux {
+    IN in, sel;
+    OUT a, b;
+
+    PARTS:
+    Not(in=sel, out=notsel);
+    And(a=in, b=notsel,out=a);
+    And(a=in, b=sel, out=b);
+
+    //// Replace this comment with your code.
+>>>>>>> e4f757cd9bf5334e2111cf62b72efb3ec8979888
 }
